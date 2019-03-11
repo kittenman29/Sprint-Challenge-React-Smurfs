@@ -33,12 +33,12 @@ class App extends Component {
   addSmurf = (event, smurf) => {
     event.preventDefault();
     // add code to create the smurf using the api
-    
+    console.log(smurf);
     axios.post('http://localhost:3333/smurfs', smurf)
       .then(res => {
         console.log(res)
         this.setState({
-          smurf: res.data
+          smurfs: res.data
         });
       })
       .catch(err => {
